@@ -23,7 +23,7 @@ fields:
         config:
           required: true
       - type: textarea
-        name: pagraph
+        name: paragraph
         label: Feature Text
         description: The text displayed below the feature title
         config:
