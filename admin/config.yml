@@ -113,33 +113,37 @@ collections:
             required: false
             label: Sections
             hint: Home Sections
-            fields:
-              - name: banner_slides
-                widget: list
-                required: false
-                label: Banner Slides
-                hint: A list of slides to be displayed in the banner
+            types:
+              - name: banner
+                widget: object
+                label: Banner Section
                 fields:
-                  - name: img_path
-                    widget: image
+                  - name: banner_slides
+                    widget: list
                     required: false
-                    label: Slide Image
-                    hint: The image displayed in the slide background
-                  - name: text
+                    label: Banner Slides
+                    hint: A list of slides to be displayed in the banner
+                    fields:
+                      - name: img_path
+                        widget: image
+                        required: false
+                        label: Slide Image
+                        hint: The image displayed in the slide background
+                      - name: text
+                        widget: string
+                        required: false
+                        label: Slide Text
+                        hint: The text displayed inside the banner slide
+                  - name: identifier
                     widget: string
-                    required: false
-                    label: Slide Text
-                    hint: The text displayed inside the banner slide
-              - name: identifier
-                widget: string
-                required: true
-                label: Section Identifier
-                default: banner
-                hint: (not displayed in the page) used to identify the section
-              - name: component
-                widget: hidden
-                required: true
-                default: banner.html
+                    required: true
+                    label: Section Identifier
+                    default: banner
+                    hint: (not displayed in the page) used to identify the section
+                  - name: component
+                    widget: hidden
+                    required: true
+                    default: banner.html
           - name: layout
             widget: hidden
             required: true
