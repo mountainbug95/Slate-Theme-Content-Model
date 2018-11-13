@@ -22,7 +22,10 @@ fields:
     label: Sections
     description: Home Sections
     template_types:
-      - section
+      - banner
+      - spotlight
+      - features
+      - post_list
   - type: text
     name: layout
     label: Layout
