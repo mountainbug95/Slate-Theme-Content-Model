@@ -278,7 +278,7 @@ collections:
           - name: title
             widget: string
             required: true
-            label: Page Title
+            label: Page Title t
           - name: layout
             widget: hidden
             required: true
