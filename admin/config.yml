@@ -113,15 +113,19 @@ collections:
             required: false
             label: Sections
             hint: Home Sections
-            fields:
-              - name: identifier
-                widget: string
-                required: true
-                label: Section Identifier
-                hint: (not displayed in the page) used to identify the section
-              - name: component
-                widget: hidden
-                required: true
+            types:
+              - name: section
+                widget: object
+                label: Section
+                fields:
+                  - name: identifier
+                    widget: string
+                    required: true
+                    label: Section Identifier
+                    hint: (not displayed in the page) used to identify the section
+                  - name: component
+                    widget: hidden
+                    required: true
           - name: layout
             widget: hidden
             required: true
