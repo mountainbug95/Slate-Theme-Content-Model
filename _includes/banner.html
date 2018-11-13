@@ -1,0 +1,11 @@
+<!-- Banner -->
+<section id="banner">
+    {% for slide in include.section.banner_slides %}
+    <article>
+        <img src="{{ slide.img_path | relative_url }}" alt="" />
+        <div class="inner">
+            <h2><a href="#">{{ slide.text }}</a></h2>
+        </div>
+    </article>
+    {% endfor %} 
+</section>

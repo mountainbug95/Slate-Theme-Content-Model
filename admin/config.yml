@@ -1,0 +1,286 @@
+backend:
+  name: git-gateway
+  branch: master
+media_folder: uploads
+public_folder: /uploads
+collections:
+  - name: config
+    label: Config
+    files:
+      - name: config
+        label: Config
+        file: _config.yml
+        fields:
+          - name: title
+            label: Title
+            widget: text
+            required: true
+          - name: footer
+            widget: object
+            required: false
+            label: Footer Configuration
+            fields:
+              - name: copyright
+                widget: string
+                required: false
+                label: Copyright Text
+                hint: The text dispayed in the bottom left of the page footer
+          - name: contact
+            widget: object
+            required: false
+            label: Contact Configuration
+            fields:
+              - name: enabled
+                widget: boolean
+                required: false
+                label: Enabled
+                default: false
+                hint: Displays the contact section at the bottom of site pages
+              - name: form_title
+                widget: string
+                required: false
+                label: Form Title
+                hint: The title displayed above the email form
+              - name: contact_list_title
+                widget: string
+                required: false
+                label: Contact Methods Title
+                hint: The title displayed above the contact icons methods
+              - name: contact_list
+                widget: list
+                required: false
+                label: Contact Methods
+                hint: A list of contact methods
+                fields:
+                  - name: title
+                    widget: string
+                    required: true
+                    label: Method Title
+                  - name: icon
+                    widget: string
+                    required: true
+                    label: Method Icon
+                    hint: >-
+                      (Font Awesome icon) The icon displayed to the left of the
+                      contact method
+                  - name: enable_link
+                    widget: boolean
+                    required: false
+                    label: Enable Link
+                    default: false
+                    hint: >-
+                      Enables the use of a link (created by the Link Label and
+                      URL fields) that is displayed in the contact method
+                      instead of the text from the text field
+                  - name: link_label
+                    widget: string
+                    required: false
+                    label: Link Label
+                    hint: The text displaayed in the contact method link
+                  - name: link_url
+                    widget: string
+                    required: false
+                    label: URL
+                  - name: text
+                    widget: text
+                    required: false
+                    label: Method Text
+                    hint: The contact method information
+  - name: home
+    label: Home
+    files:
+      - name: home
+        label: Home
+        file: index.md
+        fields:
+          - name: title
+            widget: string
+            required: true
+            label: Page Title
+          - name: pagination
+            widget: object
+            required: false
+            label: Pagination
+            fields:
+              - name: enabled
+                widget: boolean
+                required: false
+                label: Enable Pagination
+                default: false
+                hint: Enables pagination of the post section on the home page
+          - name: sections
+            widget: list
+            required: false
+            label: Sections
+            hint: Home Sections
+            types: []
+          - name: layout
+            widget: hidden
+            required: true
+            label: Layout
+            default: home
+  - name: page
+    label: Pages
+    folder: /
+    filter:
+      field: layout
+      value: page
+    create: true
+    extension: md
+    slug: '{{slug}}'
+    fields:
+      - name: title
+        widget: string
+        required: true
+        label: Page Title
+      - name: subtitle
+        widget: markdown
+        required: false
+        label: Page Subtitle
+        hint: The text displayed below the page title
+      - name: center_img_path
+        widget: image
+        required: false
+        label: Content Image
+        hint: The image displayed in the page content section
+      - name: alt_img_path
+        widget: image
+        required: false
+        label: Alternate Image
+        hint: The image used for any page thumbnails
+      - name: sidebar_enabled
+        widget: boolean
+        required: false
+        label: Enable Page Sidebar
+        default: false
+        hint: Displays the page sidebar
+      - name: sidebar
+        widget: object
+        required: false
+        label: Page Sidebar
+        fields:
+          - name: class
+            widget: select
+            required: true
+            label: Sidebar Type
+            default: sidebar left
+            hint: >-
+              The side of the page the sidebar is displayed on (Although this
+              field is required, the sidebar will not be displayed unless it is
+              enabled)
+            options:
+              - sidebar left
+              - sidebar right
+          - name: post_count
+            widget: number
+            required: true
+            label: Sidebar Posts Count
+            default: 0
+            hint: >-
+              The number of posts to be displayed in the sidebar (Although this
+              field is required, the sidebar will not be displayed unless it is
+              enabled)
+            valueType: int
+      - name: layout
+        widget: hidden
+        required: true
+        label: Layout
+        default: page
+      - name: body
+        label: Content
+        widget: markdown
+  - name: post
+    label: Posts
+    folder: _posts
+    filter:
+      field: layout
+      value: page
+    create: true
+    extension: md
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    fields:
+      - name: title
+        widget: string
+        required: true
+        label: Post Title
+      - name: subtitle
+        widget: markdown
+        required: false
+        label: Post Subtitle
+        hint: The text displayed below the page title
+      - name: excerpt
+        widget: markdown
+        required: false
+        label: Post Excerpt
+        hint: The excerpt displayed in the posts section of the landing page
+      - name: center_img_path
+        widget: image
+        required: false
+        label: Content Image
+        hint: The image displayed in the page content section
+      - name: alt_img_path
+        widget: image
+        required: false
+        label: Alternate Image
+        hint: The image used for any page thumbnails
+      - name: date
+        widget: date
+        required: true
+        label: Post Date
+      - name: sidebar_enabled
+        widget: boolean
+        required: false
+        label: Enable Page Sidebar
+        default: false
+        hint: Displays the page sidebar
+      - name: sidebar
+        widget: object
+        required: false
+        label: Page Sidebar
+        fields:
+          - name: class
+            widget: select
+            required: true
+            label: Sidebar Type
+            default: sidebar left
+            hint: >-
+              The side of the page the sidebar is displayed on (Although this
+              field is required, the sidebar will not be displayed unless it is
+              enabled)
+            options:
+              - sidebar left
+              - sidebar right
+          - name: post_count
+            widget: number
+            required: true
+            label: Sidebar Posts Count
+            default: 0
+            hint: >-
+              The number of posts to be displayed in the sidebar (Although this
+              field is required, the sidebar will not be displayed unless it is
+              enabled)
+            valueType: int
+      - name: layout
+        widget: hidden
+        required: true
+        label: Layout
+        default: page
+      - name: body
+        label: Content
+        widget: markdown
+  - name: elements
+    label: Elements
+    files:
+      - name: elements
+        label: Elements
+        file: elements.md
+        fields:
+          - name: title
+            widget: string
+            required: true
+            label: Page Title
+          - name: layout
+            widget: hidden
+            required: true
+            label: Layout
+            default: elements

@@ -1,0 +1,11 @@
+<!-- Footer -->
+<footer id="footer">
+    <div class="inner">
+        <p class="copyright">{{ site.footer.copyright }}</p>
+        <ul class="menu">
+            {% for item in site.menus.footer %}
+            <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+</footer>

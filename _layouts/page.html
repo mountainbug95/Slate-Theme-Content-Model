@@ -1,0 +1,46 @@
+---
+layout: body
+---
+
+<!-- Main -->
+<section id="main" class="wrapper {% if page.sidebar_enabled %}{{ page.sidebar.class }}{% endif %}">
+    <div class="inner">
+
+        <header class="major">
+            <h2>{{ page.title }}</h2>
+            {{ page.subtitle | markdownify }}
+        </header>
+
+        <!-- Content -->
+        <div class="content">
+            {% if page.center_img_path %}
+                <a href="#" class="image fit"><img src="{{ page.center_img_path | relative_url }}" alt="" /></a>
+            {% endif %}
+            {{ content | markdownify }}
+        </div>
+
+        {% if page.sidebar.post_count > 0 and page.sidebar_enabled %}
+        <!-- Sidebar -->
+        <div class="sidebar">
+            {% assign slice_length = page.sidebar.post_count | minus: 0 %}
+            {% assign posts = site.posts | sort: 'date' | reverse | slice: 0, slice_length %}
+            {% for post in posts %}
+                <section>
+                    {% if post.alt_img_path %}
+                        <a href="#" class="image fit"><img src="{{ post.alt_img_path | relative_url }}" alt="" /></a>
+                    {% endif %}
+                    <h3>{{ post.title }}</h3>
+                    <p>{{ post.excerpt }}</p>
+                    <footer>
+                        <ul class="actions">
+                            <li><a href="{{ post.url | relative_url }}" class="button">Learn More</a></li>
+                        </ul>
+                    </footer>
+                </section>
+                {% unless forloop.last %}<hr />{% endunless %}
+            {% endfor %}
+        </div>
+        {% endif %}
+
+    </div>
+</section>

@@ -1,0 +1,60 @@
+<!-- Three -->
+<section id="three" class="wrapper style2">
+    <div class="inner">
+        <h2>{{ include.section.title }}</h2>
+        {% if include.paginator.posts | size > 0 %}
+            <div class="posts">
+                {% for post in include.paginator.posts %}
+                    <section class="post">
+                        <span class="image"><img src="{{ post.home_img_path | relative_url }}" alt="" /></span>
+                        <div class="content">
+                            <h3>{{ post.title }}</h3>
+                            {{ post.excerpt | markdownify }}
+                            <ul class="actions">
+                                <li><a href="{{ post.url | relative_url }}" class="button">More</a></li>
+                            </ul>
+                        </div>
+                    </section>
+                {% endfor %}
+            </div>
+        {% endif %}
+        {% if include.paginator.total_pages > 1 %}
+        <ul class="pagination">
+            {% if include.paginator.previous_page %}
+            <li><a href="{{ include.paginator.previous_page_path | relative_url }}" class="button">Prev</a></li>
+            {% else %}
+            <li><span class="button disabled">Prev</span></li>
+            {% endif %}
+
+            {% if include.paginator.page > 3 %}
+            <li><a href="{{ include.paginator.first_page_path | relative_url }}" class="page">{{ include.paginator.first_page }}</a></li>
+            {% endif %}
+
+            {% if include.paginator.page > 4 %}
+            <li><span>&hellip;</span></li>
+            {% endif %}
+
+            {% assign revIndex = include.paginator.total_pages | minus: include.paginator.page %}
+            {% if include.paginator.page > 2 %}
+                {% assign minPageNumber = include.paginator.page | minus: 2 %}{% else %}
+                {% assign minPageNumber = 1 %}{% endif %}
+            {% if revIndex > 2 %}
+                {% assign maxPageNumber = include.paginator.page | plus: 2 %}{% else %}
+                {% assign maxPageNumber = include.paginator.total_pages %}{% endif %}
+            {% assign arr = (minPageNumber..maxPageNumber) %}
+            {% for pageNumber in arr %}
+            {% if pageNumber == 1 %}
+                {% assign paginationPage_url = paginator.first_page_path %}{% else %}
+                {% assign paginationPage_url = site.paginate_path | replace: '//', '/' | replace: ':num', pageNumber %}{% endif %}
+            <li><a href="{{ paginationPage_url | relative_url }}" class="page{% if pageNumber == include.paginator.page %} active{% endif %}">{{ pageNumber }}</a></li>
+            {% endfor %}
+
+            {% if include.paginator.next_page %}
+            <li><a href="{{ include.paginator.next_page_path | relative_url }}" class="button">Next</a></li>
+            {% else %}
+            <li><span class="button disabled">Next</span></li>
+            {% endif %}
+        </ul>
+        {% endif %}
+    </div> 
+</section>

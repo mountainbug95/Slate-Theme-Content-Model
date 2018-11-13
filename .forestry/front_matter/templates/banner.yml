@@ -1,0 +1,34 @@
+---
+label: Banner Section
+hide_body: true
+is_partial: true
+display_field: identifier
+fields:
+  - type: field_group_list
+    name: banner_slides
+    label: Banner Slides
+    description: A list of slides to be displayed in the banner
+    config:
+      labelField: text
+    fields:
+      - type: file
+        name: img_path
+        label: Slide Image
+        description: The image displayed in the slide background
+      - type: text
+        name: text
+        label: Slide Text
+        description: The text displayed inside the banner slide
+  - type: text
+    name: identifier
+    label: Section Identifier
+    description: (not displayed in the page) used to identify the section
+    default: banner
+    config:
+      required: true
+  - type: text
+    name: component
+    hidden: true
+    default: banner.html
+    config:
+      required: true

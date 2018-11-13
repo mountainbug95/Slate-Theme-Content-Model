@@ -1,0 +1,45 @@
+---
+label: Features Section
+hide_body: true
+is_partial: true
+display_field: identifier
+fields:
+  - type: field_group_list
+    name: column_content
+    label: Features
+    description: A list of features to be displayed in the section
+    config:
+      labelField: header
+    fields:
+      - type: text
+        name: icon
+        label: Feature Icon
+        description: (Font Awesome Icon) The icon displayed above the feature title
+        config:
+          required: true
+      - type: text
+        name: header
+        label: Feature Title
+        config:
+          required: true
+      - type: textarea
+        name: pagraph
+        label: Feature Text
+        description: The text displayed below the feature title
+        config:
+          wysiwyg: true
+          schema:
+            format: markdown
+  - type: text
+    name: identifier
+    label: Section Identifier
+    description: (not displayed in the page) used to identify the section
+    default: features
+    config:
+      required: true
+  - type: text
+    name: component
+    hidden: true
+    default: features.html
+    config:
+      required: true

@@ -1,0 +1,14 @@
+<!-- Two -->
+<section id="two" class="wrapper content-pad">
+    <div class="inner">
+        <div class="features">
+            {% for column in include.section.column_content %}
+            <section class="content">
+                <span class="icon-wrapper major"><span class="icon {{ column.icon }}"></span></span>
+                <h3>{{ column.header }}</h3>
+                {{ column.paragraph | markdownify }}
+            </section>
+            {% endfor %}
+        </div>
+    </div>
+</section>

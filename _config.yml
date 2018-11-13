@@ -1,0 +1,49 @@
+title: Slate
+baseurl: /
+footer:
+  copyright: >-
+    &copy; Slate. All rights reserved. Lorem ipsum dolor sit amet feugiat tempus
+    aliquam.
+contact:
+  enabled: true
+  form_title: Send us a message
+  contact_list_title: Other ways to reach us
+  contact_list:
+    - title: Email
+      icon: fa-envelope
+      enable_link: true
+      link_label: information@untitled.tld
+      link_url: '#'
+    - title: Twitter
+      icon: fa-twitter
+      enable_link: true
+      link_label: twitter.com/untitled-tld
+      link_url: '#'
+    - title: Phone
+      icon: fa-phone
+      text: (800) 555-0000
+    - title: Facebook
+      icon: fa-facebook
+      enable_link: true
+      link_label: facebook.com/untitled-tld
+      link_url: '#'
+    - title: Mailing Address
+      icon: fa-home
+      text: |-
+        1234 Fictional Avenue
+        Nashville, TN 00000
+        United States
+    - title: LinkedIn
+      icon: fa-linkedin
+      enable_link: true
+      link_label: linkedin.com/untitled-tld
+      link_url: '#'
+pagination:
+  enabled: true
+  per_page: 6
+  sort_reverse: true
+  sort_field: date
+plugins:
+  - jekyll-menus
+  - jekyll-paginate-v2
+permalink: '/posts/:slug:output_ext'

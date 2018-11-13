@@ -1,0 +1,42 @@
+---
+main:
+  - identifier: dropdown
+    title: Page Layouts
+    url: '#'
+    weight: 2
+  - identifier: sign_up
+    title: Sign Up
+    url: no-sidebar.html
+    weight: 4
+  - url: /index.html
+    title: Home
+    identifier: index.html
+    weight: 1
+dropdown:
+  - title: Left Sidebar
+    weight: 1
+    url: left-sidebar.html
+  - title: Right Sidebar
+    url: right-sidebar.html
+    weight: 2
+  - title: No Sidebar
+    url: no-sidebar.html
+    weight: 3
+  - identifier: submenu
+    title: Submenu
+    url: '#'
+    weight: 4
+submenu:
+  - title: Option One
+    url: '#'
+    weight: 1
+  - title: Option Two
+    url: '#'
+    weight: 2
+  - title: Option Three
+    url: '#'
+    weight: 3
+  - title: Option Four
+    url: '#'
+    weight: 4
+---

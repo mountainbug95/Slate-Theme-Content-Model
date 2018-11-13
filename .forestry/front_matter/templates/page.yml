@@ -1,0 +1,72 @@
+---
+label: Page
+is_partial: false
+fields:
+  - type: text
+    name: title
+    label: Page Title
+    config:
+      required: true
+  - type: textarea
+    name: subtitle
+    label: Page Subtitle
+    description: The text displayed below the page title
+    config:
+      wysiwyg: true
+      schema:
+        format: markdown
+  - type: file
+    name: center_img_path
+    label: Content Image
+    description: The image displayed in the page content section
+  - type: file
+    name: alt_img_path
+    label: Alternate Image
+    description: The image used for any page thumbnails
+  - type: boolean
+    name: sidebar_enabled
+    label: Enable Page Sidebar
+    description: Displays the page sidebar
+    default: false
+  - type: field_group
+    name: sidebar
+    label: Page Sidebar
+    fields:
+      - type: select
+        name: class
+        label: Sidebar Type
+        description: >-
+          The side of the page the sidebar is displayed on (Although this field
+          is required, the sidebar will not be displayed unless it is enabled)
+        default: sidebar left
+        config:
+          required: true
+          source:
+            type: custom
+          options:
+            - sidebar left
+            - sidebar right
+      - type: number
+        name: post_count
+        label: Sidebar Posts Count
+        description: >-
+          The number of posts to be displayed in the sidebar (Although this
+          field is required, the sidebar will not be displayed unless it is
+          enabled)
+        default: 0
+        config:
+          required: true
+  - type: text
+    name: layout
+    label: Layout
+    hidden: true
+    default: page
+    config:
+      required: true
+pages:
+  - left-sidebar.md
+  - legal.md
+  - no-sidebar.md
+  - privacy.md
+  - right-sidebar.md
+  - terms.md

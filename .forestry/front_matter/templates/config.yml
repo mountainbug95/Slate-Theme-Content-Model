@@ -1,0 +1,75 @@
+---
+label: Config
+hide_body: true
+is_partial: false
+fields:
+  - type: text
+    name: title
+    label: Title
+    description: Site title
+    config:
+      required: true
+  - type: field_group
+    name: footer
+    label: Footer Configuration
+    fields:
+      - type: text
+        name: copyright
+        label: Copyright Text
+        description: The text dispayed in the bottom left of the page footer
+  - type: field_group
+    name: contact
+    label: Contact Configuration
+    fields:
+      - type: boolean
+        name: enabled
+        label: Enabled
+        description: Displays the contact section at the bottom of site pages
+        default: false
+      - type: text
+        name: form_title
+        label: Form Title
+        description: The title displayed above the email form
+      - type: text
+        name: contact_list_title
+        label: Contact Methods Title
+        description: The title displayed above the contact icons methods
+      - type: field_group_list
+        name: contact_list
+        label: Contact Methods
+        description: A list of contact methods
+        config:
+          labelField: title
+        fields:
+          - type: text
+            name: title
+            label: Method Title
+            config:
+              required: true
+          - type: text
+            name: icon
+            label: Method Icon
+            description: >-
+              (Font Awesome icon) The icon displayed to the left of the contact
+              method
+            config:
+              required: true
+          - type: boolean
+            name: enable_link
+            label: Enable Link
+            description: >-
+              Enables the use of a link (created by the Link Label and URL
+              fields) that is displayed in the contact method instead of the
+              text from the text field
+            default: false
+          - type: text
+            name: link_label
+            label: Link Label
+            description: The text displaayed in the contact method link
+          - type: text
+            name: link_url
+            label: URL
+          - type: textarea
+            name: text
+            label: Method Text
+            description: The contact method information
