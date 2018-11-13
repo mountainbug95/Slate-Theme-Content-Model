@@ -113,33 +113,120 @@ collections:
             required: false
             label: Sections
             hint: Home Sections
-            fields:
-              - name: banner_slides
-                widget: list
-                required: false
-                label: Banner Slides
-                hint: A list of slides to be displayed in the banner
+            types:
+              - name: banner
+                widget: object
+                label: Banner Section
                 fields:
-                  - name: img_path
+                  - name: banner_slides
+                    widget: list
+                    required: false
+                    label: Banner Slides
+                    hint: A list of slides to be displayed in the banner
+                    fields:
+                      - name: img_path
+                        widget: image
+                        required: false
+                        label: Slide Image
+                        hint: The image displayed in the slide background
+                      - name: text
+                        widget: string
+                        required: false
+                        label: Slide Text
+                        hint: The text displayed inside the banner slide
+                  - name: identifier
+                    widget: string
+                    required: true
+                    label: Section Identifier
+                    default: banner
+                    hint: (not displayed in the page) used to identify the section
+                  - name: component
+                    widget: hidden
+                    required: true
+                    default: banner.html
+              - name: spotlight
+                widget: object
+                label: Spotlight Section
+                fields:
+                  - name: title
+                    widget: text
+                    required: true
+                    label: Section Title
+                  - name: title_img_path
                     widget: image
                     required: false
-                    label: Slide Image
-                    hint: The image displayed in the slide background
-                  - name: text
-                    widget: string
+                    label: Title Image
+                    hint: The image displayed net to the spotlight title
+                  - name: content
+                    widget: markdown
                     required: false
-                    label: Slide Text
-                    hint: The text displayed inside the banner slide
-              - name: identifier
-                widget: string
-                required: true
-                label: Section Identifier
-                default: banner
-                hint: (not displayed in the page) used to identify the section
-              - name: component
-                widget: hidden
-                required: true
-                default: banner.html
+                    label: Spotlight Content
+                    hint: The text displayed below the spotlight title
+                  - name: identifier
+                    widget: string
+                    required: true
+                    label: Section Identifier
+                    default: spotlight
+                    hint: (not displayed in the page) used to identify the section
+                  - name: component
+                    widget: hidden
+                    required: true
+                    default: spotlight.html
+              - name: features
+                widget: object
+                label: Features Section
+                fields:
+                  - name: column_content
+                    widget: list
+                    required: false
+                    label: Features
+                    hint: A list of features to be displayed in the section
+                    fields:
+                      - name: icon
+                        widget: string
+                        required: true
+                        label: Feature Icon
+                        hint: >-
+                          (Font Awesome Icon) The icon displayed above the
+                          feature title
+                      - name: header
+                        widget: string
+                        required: true
+                        label: Feature Title
+                      - name: pagraph
+                        widget: markdown
+                        required: false
+                        label: Feature Text
+                        hint: The text displayed below the feature title
+                  - name: identifier
+                    widget: string
+                    required: true
+                    label: Section Identifier
+                    default: features
+                    hint: (not displayed in the page) used to identify the section
+                  - name: component
+                    widget: hidden
+                    required: true
+                    default: features.html
+              - name: post_list
+                widget: object
+                label: Posts Section
+                fields:
+                  - name: title
+                    widget: string
+                    required: true
+                    label: Section Title
+                    hint: The title displayed at the top of the section
+                  - name: identifier
+                    widget: string
+                    required: true
+                    label: Section Identifier
+                    default: posts
+                    hint: (not displayed in the page) used to identify the section
+                  - name: component
+                    widget: hidden
+                    required: true
+                    default: post_list.html
           - name: layout
             widget: hidden
             required: true
