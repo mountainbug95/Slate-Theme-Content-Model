@@ -3,15 +3,15 @@ title: Home
 pagination:
   enabled: true
 sections:
-  - component: banner.html
-    identifier: banner
-    banner_slides:
+  - banner_slides:
       - img_path: images/slide01.jpg
         text: Magna tempus. Sed feugiat.
       - img_path: images/slide02.jpg
         text: Aliquam veroeros nullam.
       - img_path: images/slide03.jpg
         text: Consequat dolore adipiscing.
+    identifier: banner
+    component: banner.html
     type: banner
   - title: Libero bibendum nullam vitae magna sed veroeros
     title_img_path: images/pic07.jpg
@@ -22,9 +22,7 @@ sections:
     identifier: spotlight
     component: spotlight.html
     type: spotlight
-  - component: features.html
-    identifier: features
-    column_content:
+  - column_content:
       - icon: fa-pencil
         header: Praesent sed donec
         paragraph: >-
@@ -43,6 +41,8 @@ sections:
           Duis vulputate sit amet metus quis facilisis. Sed dapibus neque erat
           fringilla tincidunt. Nullam sapien et sapien, iaculis ac varius
           ultrices nec metus. Aenean ultricies magna.
+    identifier: features
+    component: features.html
     type: features
   - title: Etiam sed tellus
     identifier: posts
