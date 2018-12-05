@@ -9,33 +9,35 @@ contact:
   form_title: Send us a message
   contact_list_title: Other ways to reach us
   contact_list:
-    - title: Email
+    - type: contact_item_link
+      title: Email
       icon: fa-envelope
-      enable_link: true
       link_label: information@untitled.tld
       link_url: '#'
-    - title: Twitter
+    - type: contact_item_link
+      title: Twitter
       icon: fa-twitter
-      enable_link: true
       link_label: twitter.com/untitled-tld
       link_url: '#'
-    - title: Phone
+    - type: contact_item_text
+      title: Phone
       icon: fa-phone
       text: (800) 555-0000
-    - title: Facebook
+    - type: contact_item_link
+      title: Facebook
       icon: fa-facebook
-      enable_link: true
       link_label: facebook.com/untitled-tld
       link_url: '#'
-    - title: Mailing Address
+    - type: contact_item_text
+      title: Mailing Address
       icon: fa-home
       text: |-
         1234 Fictional Avenue
         Nashville, TN 00000
         United States
-    - title: LinkedIn
+    - type: contact_item_link
+      title: LinkedIn
       icon: fa-linkedin
-      enable_link: true
       link_label: linkedin.com/untitled-tld
       link_url: '#'
 pagination:

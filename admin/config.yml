@@ -51,41 +51,51 @@ collections:
                 required: false
                 label: Contact Methods
                 hint: A list of contact methods
-                fields:
-                  - name: title
-                    widget: string
-                    required: true
-                    label: Method Title
-                  - name: icon
-                    widget: string
-                    required: true
-                    label: Method Icon
-                    hint: >-
-                      (Font Awesome icon) The icon displayed to the left of the
-                      contact method
-                  - name: enable_link
-                    widget: boolean
-                    required: false
-                    label: Enable Link
-                    default: false
-                    hint: >-
-                      Enables the use of a link (created by the Link Label and
-                      URL fields) that is displayed in the contact method
-                      instead of the text from the text field
-                  - name: link_label
-                    widget: string
-                    required: false
-                    label: Link Label
-                    hint: The text displaayed in the contact method link
-                  - name: link_url
-                    widget: string
-                    required: false
-                    label: URL
-                  - name: text
-                    widget: text
-                    required: false
-                    label: Method Text
-                    hint: The contact method information
+                types:
+                  - name: contact_item_text
+                    widget: object
+                    label: Contact Item With Text
+                    fields:
+                      - name: title
+                        widget: string
+                        required: true
+                        label: Method Title
+                      - name: icon
+                        widget: string
+                        required: true
+                        label: Method Icon
+                        hint: >-
+                          (Font Awesome icon) The icon displayed to the left of
+                          the contact method
+                      - name: text
+                        widget: text
+                        required: false
+                        label: Method Text
+                        hint: The contact method information
+                  - name: contact_item_link
+                    widget: object
+                    label: Contact Item With Link
+                    fields:
+                      - name: title
+                        widget: string
+                        required: true
+                        label: Method Title
+                      - name: icon
+                        widget: string
+                        required: true
+                        label: Method Icon
+                        hint: >-
+                          (Font Awesome icon) The icon displayed to the left of
+                          the contact method
+                      - name: link_label
+                        widget: string
+                        required: false
+                        label: Link Label
+                        hint: The text displaayed in the contact method link
+                      - name: link_url
+                        widget: string
+                        required: false
+                        label: URL
   - name: home
     label: Home
     files:

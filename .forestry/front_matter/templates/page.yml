@@ -53,7 +53,7 @@ fields:
           The number of posts to be displayed in the sidebar (Although this
           field is required, the sidebar will not be displayed unless it is
           enabled)
-        default: 0
+        default: 1
         config:
           required: true
   - type: text

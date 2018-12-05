@@ -34,42 +34,10 @@ fields:
         name: contact_list_title
         label: Contact Methods Title
         description: The title displayed above the contact icons methods
-      - type: field_group_list
+      - type: blocks
         name: contact_list
         label: Contact Methods
         description: A list of contact methods
-        config:
-          labelField: title
-        fields:
-          - type: text
-            name: title
-            label: Method Title
-            config:
-              required: true
-          - type: text
-            name: icon
-            label: Method Icon
-            description: >-
-              (Font Awesome icon) The icon displayed to the left of the contact
-              method
-            config:
-              required: true
-          - type: boolean
-            name: enable_link
-            label: Enable Link
-            description: >-
-              Enables the use of a link (created by the Link Label and URL
-              fields) that is displayed in the contact method instead of the
-              text from the text field
-            default: false
-          - type: text
-            name: link_label
-            label: Link Label
-            description: The text displaayed in the contact method link
-          - type: text
-            name: link_url
-            label: URL
-          - type: textarea
-            name: text
-            label: Method Text
-            description: The contact method information
+        template_types:
+          - contact_item_text
+          - contact_item_link
