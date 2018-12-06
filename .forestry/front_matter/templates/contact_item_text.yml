@@ -1,6 +1,8 @@
 ---
 label: Contact Item With Text
+hide_body: true
 is_partial: true
+display_field: title
 fields:
   - type: text
     name: title
