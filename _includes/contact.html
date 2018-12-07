@@ -36,9 +36,9 @@
                         <p>
                             {% if list_item.type == 'contact_item_link' %}
                                 <a href="{{ list_item.link_url }}">{{ list_item.link_label }}</a>
-                            {% else %}{% if list_item.type == 'contact_item_text' %}
+                            {% elsif list_item.type == 'contact_item_text' %}
                                 {{ list_item.text | newline_to_br }}
-                            {% endif %}{% endif %}
+                            {% endif %}
                         </p>
                     </li>
                 {% endfor %}
