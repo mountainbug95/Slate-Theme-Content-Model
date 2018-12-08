@@ -144,15 +144,10 @@ collections:
                         required: false
                         label: Slide Text
                         hint: The text displayed inside the banner slide
-                  - name: identifier
-                    widget: string
-                    required: true
-                    label: Section Identifier
-                    default: banner
-                    hint: (not displayed in the page) used to identify the section
                   - name: component
                     widget: hidden
                     required: true
+                    label: Section Component
                     default: banner.html
               - name: spotlight
                 widget: object
@@ -172,15 +167,10 @@ collections:
                     required: false
                     label: Spotlight Content
                     hint: The text displayed below the spotlight title
-                  - name: identifier
-                    widget: string
-                    required: true
-                    label: Section Identifier
-                    default: spotlight
-                    hint: (not displayed in the page) used to identify the section
                   - name: component
                     widget: hidden
                     required: true
+                    label: Section Component
                     default: spotlight.html
               - name: features
                 widget: object
@@ -208,15 +198,10 @@ collections:
                         required: false
                         label: Feature Text
                         hint: The text displayed below the feature title
-                  - name: identifier
-                    widget: string
-                    required: true
-                    label: Section Identifier
-                    default: features
-                    hint: (not displayed in the page) used to identify the section
                   - name: component
                     widget: hidden
                     required: true
+                    label: Section Component
                     default: features.html
               - name: post_list
                 widget: object
@@ -227,15 +212,10 @@ collections:
                     required: true
                     label: Section Title
                     hint: The title displayed at the top of the section
-                  - name: identifier
-                    widget: string
-                    required: true
-                    label: Section Identifier
-                    default: posts
-                    hint: (not displayed in the page) used to identify the section
                   - name: component
                     widget: hidden
                     required: true
+                    label: Section Component
                     default: post_list.html
           - name: layout
             widget: hidden
