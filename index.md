@@ -10,7 +10,6 @@ sections:
         text: Aliquam veroeros nullam.
       - img_path: images/slide03.jpg
         text: Consequat dolore adipiscing.
-    identifier: banner
     component: banner.html
     template: banner
   - title: Libero bibendum nullam vitae magna sed veroeros
@@ -19,7 +18,6 @@ sections:
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id interdum
       magna, ultricies aliquet curabitur sed metus pellentesque, ornare sapien
       quis.
-    identifier: spotlight
     component: spotlight.html
     template: spotlight
   - column_content:
@@ -41,11 +39,9 @@ sections:
           Duis vulputate sit amet metus quis facilisis. Sed dapibus neque erat
           fringilla tincidunt. Nullam sapien et sapien, iaculis ac varius
           ultrices nec metus. Aenean ultricies magna.
-    identifier: features
     component: features.html
     template: features
   - title: Etiam sed tellus
-    identifier: posts
     component: post_list.html
     template: post_list
 layout: home

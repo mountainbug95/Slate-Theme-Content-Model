@@ -2,7 +2,7 @@
 label: Banner Section
 hide_body: true
 is_partial: true
-display_field: identifier
+display_field: type
 fields:
   - type: field_group_list
     name: banner_slides
@@ -19,13 +19,6 @@ fields:
         name: text
         label: Slide Text
         description: The text displayed inside the banner slide
-  - type: text
-    name: identifier
-    label: Section Identifier
-    description: (not displayed in the page) used to identify the section
-    default: banner
-    config:
-      required: true
   - type: text
     name: component
     label: Section Component

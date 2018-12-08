@@ -2,7 +2,7 @@
 label: Spotlight Section
 hide_body: true
 is_partial: true
-display_field: identifier
+display_field: type
 fields:
   - type: textarea
     name: title
@@ -21,13 +21,6 @@ fields:
       wysiwyg: true
       schema:
         format: markdown
-  - type: text
-    name: identifier
-    label: Section Identifier
-    description: (not displayed in the page) used to identify the section
-    default: spotlight
-    config:
-      required: true
   - type: text
     name: component
     label: Section Component
