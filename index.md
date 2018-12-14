@@ -11,7 +11,7 @@ sections:
       - img_path: images/slide03.jpg
         text: Consequat dolore adipiscing.
     component: banner.html
-    type: banner
+    template: banner
   - title: Libero bibendum nullam vitae magna sed veroeros
     title_img_path: images/pic07.jpg
     content: >-
@@ -19,7 +19,7 @@ sections:
       magna, ultricies aliquet curabitur sed metus pellentesque, ornare sapien
       quis.
     component: spotlight.html
-    type: spotlight
+    template: spotlight
   - column_content:
       - icon: fa-pencil
         header: Praesent sed donec
@@ -40,9 +40,9 @@ sections:
           fringilla tincidunt. Nullam sapien et sapien, iaculis ac varius
           ultrices nec metus. Aenean ultricies magna.
     component: features.html
-    type: features
+    template: features
   - title: Etiam sed tellus
     component: post_list.html
-    type: post_list
+    template: post_list
 layout: home
 ---
