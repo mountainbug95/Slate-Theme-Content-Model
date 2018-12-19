@@ -4,29 +4,30 @@ hide_body: true
 is_partial: true
 display_field: title
 fields:
-  - type: text
-    name: type
-    label: Type
-    description: The type identifier of this object inside block lists
-    hidden: true
-    default: contact_item_link
-    config:
-      required: true
-  - type: text
-    name: title
-    label: Method Title
-    config:
-      required: true
-  - type: text
-    name: icon
-    label: Method Icon
-    description: (Font Awesome icon) The icon displayed to the left of the contact method
-    config:
-      required: true
-  - type: text
-    name: link_label
-    label: Link Label
-    description: The text displaayed in the contact method link
-  - type: text
-    name: link_url
-    label: URL
+- type: text
+  name: type
+  label: Type
+  description: The type identifier of this object inside block lists
+  hidden: true
+  default: contact_item_link
+  config:
+    required: true
+- type: text
+  name: title
+  label: Method Title
+  config:
+    required: true
+- type: text
+  name: icon
+  label: Method Icon
+  description: "(Font Awesome icon) The icon displayed to the left of the contact
+    method"
+  config:
+    required: true
+- type: text
+  name: link_label
+  label: Link Label
+  description: The text displaayed in the contact method link
+- type: text
+  name: link_url
+  label: URL

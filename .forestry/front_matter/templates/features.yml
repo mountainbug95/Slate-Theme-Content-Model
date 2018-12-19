@@ -4,44 +4,44 @@ hide_body: true
 is_partial: true
 display_field: type
 fields:
+- type: text
+  name: type
+  label: Type
+  description: The type identifier of this object inside block lists
+  hidden: true
+  default: features
+  config:
+    required: true
+- type: field_group_list
+  name: column_content
+  label: Features
+  description: A list of features to be displayed in the section
+  config:
+    labelField: header
+  fields:
   - type: text
-    name: type
-    label: Type
-    description: The type identifier of this object inside block lists
-    hidden: true
-    default: features
+    name: icon
+    label: Feature Icon
+    description: "(Font Awesome Icon) The icon displayed above the feature title"
     config:
       required: true
-  - type: field_group_list
-    name: column_content
-    label: Features
-    description: A list of features to be displayed in the section
-    config:
-      labelField: header
-    fields:
-      - type: text
-        name: icon
-        label: Feature Icon
-        description: (Font Awesome Icon) The icon displayed above the feature title
-        config:
-          required: true
-      - type: text
-        name: header
-        label: Feature Title
-        config:
-          required: true
-      - type: textarea
-        name: paragraph
-        label: Feature Text
-        description: The text displayed below the feature title
-        config:
-          wysiwyg: true
-          schema:
-            format: markdown
   - type: text
-    name: component
-    label: Section Component
-    hidden: true
-    default: features.html
+    name: header
+    label: Feature Title
     config:
       required: true
+  - type: textarea
+    name: paragraph
+    label: Feature Text
+    description: The text displayed below the feature title
+    config:
+      wysiwyg: true
+      schema:
+        format: markdown
+- type: text
+  name: component
+  label: Section Component
+  hidden: true
+  default: features.html
+  config:
+    required: true

@@ -1,57 +1,62 @@
+---
 title: Slate
-baseurl: /
+baseurl: "/"
 footer:
-  copyright: >-
-    &copy; Slate. All rights reserved. Lorem ipsum dolor sit amet feugiat tempus
-    aliquam.
+  copyright: "&copy; Slate. All rights reserved. Lorem ipsum dolor sit amet feugiat
+    tempus aliquam."
 contact:
   enabled: true
   form_title: Send us a message
   contact_list_title: Other ways to reach us
   contact_list:
-    - type: contact_item_link
-      title: Email
-      icon: fa-envelope
-      link_label: information@untitled.tld
-      link_url: '#'
-      template: contact_item_link
-    - type: contact_item_link
-      title: Twitter
-      icon: fa-twitter
-      link_label: twitter.com/untitled-tld
-      link_url: '#'
-      template: contact_item_link
-    - type: contact_item_text
-      title: Phone
-      icon: fa-phone
-      text: (800) 555-0000
-      template: contact_item_text
-    - type: contact_item_link
-      title: Facebook
-      icon: fa-facebook
-      link_label: facebook.com/untitled-tld
-      link_url: '#'
-      template: contact_item_link
-    - type: contact_item_text
-      title: Mailing Address
-      icon: fa-home
-      text: |-
-        1234 Fictional Avenue
-        Nashville, TN 00000
-        United States
-      template: contact_item_text
-    - type: contact_item_link
-      title: LinkedIn
-      icon: fa-linkedin
-      link_label: linkedin.com/untitled-tld
-      link_url: '#'
-      template: contact_item_link
+  - type: contact_item_link
+    title: Email
+    icon: fa-envelope
+    link_label: information@untitled.tld
+    link_url: "#"
+    template: contact_item_link
+  - type: contact_item_link
+    title: Twitter
+    icon: fa-twitter
+    link_label: twitter.com/untitled-tld
+    link_url: "#"
+    template: contact_item_link
+  - type: contact_item_text
+    title: Phone
+    icon: fa-phone
+    text: "(800) 555-0000"
+    template: contact_item_text
+  - type: contact_item_link
+    title: Facebook
+    icon: fa-facebook
+    link_label: facebook.com/untitled-tld
+    link_url: "#"
+    template: contact_item_link
+  - type: contact_item_text
+    title: Mailing Address
+    icon: fa-home
+    text: |-
+      1234 Fictional Avenue
+      Nashville, TN 00000
+      United States
+    template: contact_item_text
+  - type: contact_item_link
+    title: LinkedIn
+    icon: fa-linkedin
+    link_label: linkedin.com/untitled-tld
+    link_url: "#"
+    template: contact_item_link
+  - template: contact_item_text
+    type: contact_item_text
+    title: Test item
+    icon: fa-cog
+    text: test eext
 pagination:
   enabled: true
   per_page: 6
   sort_reverse: true
   sort_field: date
 plugins:
-  - jekyll-menus
-  - jekyll-paginate-v2
-permalink: '/posts/:slug:output_ext'
+- jekyll-menus
+- jekyll-paginate-v2
+permalink: "/posts/:slug:output_ext"

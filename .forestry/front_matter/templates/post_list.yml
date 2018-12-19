@@ -4,24 +4,24 @@ hide_body: true
 is_partial: true
 display_field: type
 fields:
-  - type: text
-    name: type
-    label: Type
-    description: The type identifier of this object inside block lists
-    hidden: true
-    default: post_list
-    config:
-      required: true
-  - type: text
-    name: title
-    label: Section Title
-    description: The title displayed at the top of the section
-    config:
-      required: true
-  - type: text
-    name: component
-    label: Section Component
-    hidden: true
-    default: post_list.html
-    config:
-      required: true
+- type: text
+  name: type
+  label: Type
+  description: The type identifier of this object inside block lists
+  hidden: true
+  default: post_list
+  config:
+    required: true
+- type: text
+  name: title
+  label: Section Title
+  description: The title displayed at the top of the section
+  config:
+    required: true
+- type: text
+  name: component
+  label: Section Component
+  hidden: true
+  default: post_list.html
+  config:
+    required: true

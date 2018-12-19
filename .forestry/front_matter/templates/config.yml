@@ -3,41 +3,41 @@ label: Config
 hide_body: true
 is_partial: false
 fields:
+- type: text
+  name: title
+  label: Title
+  description: Site title
+  config:
+    required: true
+- type: field_group
+  name: footer
+  label: Footer Configuration
+  fields:
   - type: text
-    name: title
-    label: Title
-    description: Site title
-    config:
-      required: true
-  - type: field_group
-    name: footer
-    label: Footer Configuration
-    fields:
-      - type: text
-        name: copyright
-        label: Copyright Text
-        description: The text dispayed in the bottom left of the page footer
-  - type: field_group
-    name: contact
-    label: Contact Configuration
-    fields:
-      - type: boolean
-        name: enabled
-        label: Enabled
-        description: Displays the contact section at the bottom of site pages
-        default: false
-      - type: text
-        name: form_title
-        label: Form Title
-        description: The title displayed above the email form
-      - type: text
-        name: contact_list_title
-        label: Contact Methods Title
-        description: The title displayed above the contact icons methods
-      - type: blocks
-        name: contact_list
-        label: Contact Methods
-        description: A list of contact methods
-        template_types:
-          - contact_item_text
-          - contact_item_link
+    name: copyright
+    label: Copyright Text
+    description: The text dispayed in the bottom left of the page footer
+- type: field_group
+  name: contact
+  label: Contact Configuration
+  fields:
+  - type: boolean
+    name: enabled
+    label: Enabled
+    description: Displays the contact section at the bottom of site pages
+    default: false
+  - type: text
+    name: form_title
+    label: Form Title
+    description: The title displayed above the email form
+  - type: text
+    name: contact_list_title
+    label: Contact Methods Title
+    description: The title displayed above the contact icons methods
+  - type: blocks
+    name: contact_list
+    label: Contact Methods
+    description: A list of contact methods
+    template_types:
+    - contact_item_text
+    - contact_item_link

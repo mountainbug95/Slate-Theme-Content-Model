@@ -3,35 +3,35 @@ label: Home
 hide_body: true
 is_partial: false
 fields:
-  - type: text
-    name: title
-    label: Page Title
-    config:
-      required: true
-  - type: field_group
-    name: pagination
-    label: Pagination
-    fields:
-      - type: boolean
-        name: enabled
-        label: Enable Pagination
-        description: Enables pagination of the post section on the home page
-        default: false
-  - type: blocks
-    name: sections
-    label: Sections
-    description: Home Sections
-    template_types:
-      - banner
-      - spotlight
-      - features
-      - post_list
-  - type: text
-    name: layout
-    label: Layout
-    hidden: true
-    default: home
-    config:
-      required: true
+- type: text
+  name: title
+  label: Page Title
+  config:
+    required: true
+- type: field_group
+  name: pagination
+  label: Pagination
+  fields:
+  - type: boolean
+    name: enabled
+    label: Enable Pagination
+    description: Enables pagination of the post section on the home page
+    default: false
+- type: blocks
+  name: sections
+  label: Sections
+  description: Home Sections
+  template_types:
+  - banner
+  - spotlight
+  - features
+  - post_list
+- type: text
+  name: layout
+  label: Layout
+  hidden: true
+  default: home
+  config:
+    required: true
 pages:
-  - index.md
+- index.md

@@ -4,9 +4,9 @@ hide_body: true
 is_partial: true
 display_field: type
 fields:
-  - type: text
-    name: component
-    label: Section Component
-    hidden: true
-    config:
-      required: true
+- type: text
+  name: component
+  label: Section Component
+  hidden: true
+  config:
+    required: true

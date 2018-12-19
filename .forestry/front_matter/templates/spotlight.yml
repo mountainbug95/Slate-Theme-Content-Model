@@ -4,35 +4,35 @@ hide_body: true
 is_partial: true
 display_field: type
 fields:
-  - type: text
-    name: type
-    label: Type
-    description: The type identifier of this object inside block lists
-    hidden: true
-    default: spotlight
-    config:
-      required: true
-  - type: textarea
-    name: title
-    label: Section Title
-    config:
-      required: true
-  - type: file
-    name: title_img_path
-    label: Title Image
-    description: The image displayed net to the spotlight title
-  - type: textarea
-    name: content
-    label: Spotlight Content
-    description: The text displayed below the spotlight title
-    config:
-      wysiwyg: true
-      schema:
-        format: markdown
-  - type: text
-    name: component
-    label: Section Component
-    hidden: true
-    default: spotlight.html
-    config:
-      required: true
+- type: text
+  name: type
+  label: Type
+  description: The type identifier of this object inside block lists
+  hidden: true
+  default: spotlight
+  config:
+    required: true
+- type: textarea
+  name: title
+  label: Section Title
+  config:
+    required: true
+- type: file
+  name: title_img_path
+  label: Title Image
+  description: The image displayed net to the spotlight title
+- type: textarea
+  name: content
+  label: Spotlight Content
+  description: The text displayed below the spotlight title
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown
+- type: text
+  name: component
+  label: Section Component
+  hidden: true
+  default: spotlight.html
+  config:
+    required: true
