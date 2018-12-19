@@ -51,6 +51,12 @@ contact:
     title: Test item
     icon: fa-cog
     text: test eext
+  - template: contact_item_link
+    type: contact_item_link
+    title: Test Link
+    icon: fa-cog
+    link_label: test link
+    link_url: "#"
 pagination:
   enabled: true
   per_page: 6
