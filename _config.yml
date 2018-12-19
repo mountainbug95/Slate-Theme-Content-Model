@@ -14,20 +14,24 @@ contact:
       icon: fa-envelope
       link_label: information@untitled.tld
       link_url: '#'
+      template: contact_item_link
     - type: contact_item_link
       title: Twitter
       icon: fa-twitter
       link_label: twitter.com/untitled-tld
       link_url: '#'
+      template: contact_item_link
     - type: contact_item_text
       title: Phone
       icon: fa-phone
       text: (800) 555-0000
+      template: contact_item_text
     - type: contact_item_link
       title: Facebook
       icon: fa-facebook
       link_label: facebook.com/untitled-tld
       link_url: '#'
+      template: contact_item_link
     - type: contact_item_text
       title: Mailing Address
       icon: fa-home
@@ -35,11 +39,13 @@ contact:
         1234 Fictional Avenue
         Nashville, TN 00000
         United States
+      template: contact_item_text
     - type: contact_item_link
       title: LinkedIn
       icon: fa-linkedin
       link_label: linkedin.com/untitled-tld
       link_url: '#'
+      template: contact_item_link
 pagination:
   enabled: true
   per_page: 6

@@ -5,6 +5,14 @@ is_partial: true
 display_field: title
 fields:
   - type: text
+    name: type
+    label: Type
+    description: The type identifier of this object inside block lists
+    hidden: true
+    default: contact_item_link
+    config:
+      required: true
+  - type: text
     name: title
     label: Method Title
     config:
